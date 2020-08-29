@@ -6,20 +6,63 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css2?family=Recursive&display=swap" rel="stylesheet" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
         <div class="page-header">
+
+            <!-- Navbar (sit on top) -->
+            <div class="top">
+                <div class="bar" id="myNavbar">
+                    
+                    <!--
+                    <a class="bar-item button hover-black hide-medium hide-large right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    -->
+                    
+                    <div class="pagination">
+                        <a href="" class="bar-item button hide-small"><i class="fa fa-th"></i> Blog</a>
+                        <a href="about" class="bar-item button hide-small"><i class="fa fa-user"></i> About</a>
+                        <!-- <a href="contact" class="bar-item button hide-small"><i class="fa fa-envelope"></i> Contact</a> -->
+                    </div>
+                </div>
+            </div>
+
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon-plus"></span></a>
             {% endif %}
-            <h1><a href="/">Ben's Blog</a></h1>
+            <h1><a href="/">Ben Williamson</a></h1>
         </div>
+
+        <!-- First Parallax Image with Logo Text -->
+        <!-- <div class="bgimg-1 display-container opacity-min" id="home" data-paralax="scroll" data-image-src="{% static 'images/WoodsDance.jpeg' %}"></div>
+        <div class="bgimg-1"></div>
+        <div class="container-fluid bgimg-1 clearfix parallax-window2" id="home" data-parallax="scroll" data-image-src="{% static 'images/WoodsDance.jpeg' %}"></div>
+        <div class="display-middle" style="white-space:nowrap;">
+            <span class="center padding-large black xlarge wide animate-opagcity">First <span class="hide-small">Second </span>Third </span>
+        </div>
+        -->
+
+        <div class="pagination">
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a> 
+            <a href="#">7</a>
+            <a href="#">8</a>
+        </div>
+
         <div class="content container">
+            <!-- <div class="row">
+                <div class="col-md-8"> -->
             <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+                <div class="col 18 s12">
+                    {% block content %}
+                     {% endblock %}
                 </div>
             </div>
         </div>
