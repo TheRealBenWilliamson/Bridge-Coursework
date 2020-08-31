@@ -43,4 +43,10 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+def run_about(request):
+    aboutTextFile = open('/home/benwilliamson.benwilliamson.pythonanywhere.com/blog/about.txt', 'r')
+    content = aboutTextFile.read()
+    aboutTextFile.close()
+    return render(request, '/home/benwilliamson.benwilliamson.pythonanywhere.com/blog/about.txt', {'content': content})
+
   

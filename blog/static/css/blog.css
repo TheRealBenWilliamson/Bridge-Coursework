@@ -142,7 +142,7 @@ a:hover, a:active {
   
   /* Second image (Portfolio) */
   .bgimg-2 {
-    background-image: url("http://jxd965.pythonanywhere.com/static/website/images/me.jpg");
+    background-image: url("/static/images/WoodsDance.jpeg");
     min-height: 400px;
   }
   
